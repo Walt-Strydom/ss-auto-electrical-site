@@ -76,7 +76,7 @@ export default function Header() {
       </nav>
 
       {mobileOpen && (
-        <div className="md:hidden bg-white shadow-lg py-4 px-6 space-y-4">
+        <div className="md:hidden fixed inset-0 bg-white z-40 px-6 pt-24 pb-8 space-y-6">
           <Link href="/" className="block text-black hover:text-[#ffb200]">
             Home
           </Link>
@@ -90,8 +90,7 @@ export default function Header() {
               <Link
                 key={item.id}
                 href={`/services#${item.id}`}
-                className="block pl-4 text-gray-700 hover:text-[#ffb200] transition-all transform translate-y-2 opacity-0 animate-[fadeInSlide_0.3s_ease-out_forwards]"
-                style={{ animationDelay: `${i * 70}ms` }}
+                className="block pl-4 text-gray-700 hover:text-[#ffb200] transition-all"
               >
                 {item.label}
               </Link>
