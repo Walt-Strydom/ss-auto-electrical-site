@@ -1,6 +1,7 @@
 import "../app/globals.css";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
+import ScrollToTop from "../components/ScrollToTop";
 
 export const metadata = {
   title: "SS Auto Electrical",
@@ -14,13 +15,11 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <head>
-        <link rel="icon" href="/favicon.png" type="image/png" />
-      </head>
-      <body className="font-sans bg-gray-100">
+      <body className="font-sans bg-[#f9fafb] text-black">
         <Header />
         <main>{children}</main>
         <Footer />
+        <ScrollToTop />
       </body>
     </html>
   );

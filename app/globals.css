@@ -1,15 +1,16 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+@import "leaflet/dist/leaflet.css";
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
-
-@import "leaflet/dist/leaflet.css";
-
 body {
-  @apply bg-gray-100 font-sans;
+  background-color: #f9fafb; /* very light, neutral tone */
   font-family: 'Inter', sans-serif;
 }
+
+
 @keyframes fade-in {
   from {
     opacity: 0;

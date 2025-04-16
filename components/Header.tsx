@@ -21,7 +21,8 @@ export default function Header() {
   const handleMobileNavigate = () => setMobileOpen(false);
 
   return (
-    <header className="bg-white shadow-sm py-2 fixed w-full top-0 z-50">
+      <header className="bg-white shadow-sm py-2 w-full">
+
       <nav className="container mx-auto flex justify-between items-center px-4">
         <Link href="/">
           <Image
