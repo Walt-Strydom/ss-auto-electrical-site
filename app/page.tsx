@@ -28,7 +28,7 @@ export default function Home() {
         className="relative w-full h-[80vh] bg-cover bg-center flex flex-col items-center justify-center text-white text-center px-4 animate-fade-in before:absolute before:inset-0 before:bg-black/50 before:z-0"
         style={{ backgroundImage: "url('/hero.jpg')" }}
       >
-        <h1 className="text-4xl md:text-5xl font-bold drop-shadow-lg mb-6 z-10">
+        <h1 className="text-4xl md:text-5xl font-bold italic drop-shadow-lg mb-6">
           Powering Performance, Wherever You Are
         </h1>
         <Link
