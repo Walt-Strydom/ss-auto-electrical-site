@@ -18,6 +18,8 @@ export default function Header() {
     { id: "dyno", label: "Dyno Support" },
   ];
 
+  const handleMobileNavigate = () => setMobileOpen(false);
+
   return (
     <header className="bg-white shadow-sm py-2 fixed w-full top-0 z-50">
       <nav className="container mx-auto flex justify-between items-center px-4">
@@ -77,20 +79,26 @@ export default function Header() {
 
       {mobileOpen && (
         <div className="md:hidden fixed inset-0 bg-white z-40 px-6 pt-24 pb-8 space-y-6">
-          <Link href="/" className="block text-black hover:text-[#ffb200]">
+          <div className="flex justify-end">
+            <button onClick={() => setMobileOpen(false)}>
+              <X size={24} />
+            </button>
+          </div>
+          <Link href="/" className="block text-black hover:text-[#ffb200]" onClick={handleMobileNavigate}>
             Home
           </Link>
-          <Link href="/about" className="block text-black hover:text-[#ffb200]">
+          <Link href="/about" className="block text-black hover:text-[#ffb200]" onClick={handleMobileNavigate}>
             About
           </Link>
 
           <div className="space-y-1">
             <div className="text-black font-medium">Services</div>
-            {dropdownItems.map((item, i) => (
+            {dropdownItems.map((item) => (
               <Link
                 key={item.id}
                 href={`/services#${item.id}`}
                 className="block pl-4 text-gray-700 hover:text-[#ffb200] transition-all"
+                onClick={handleMobileNavigate}
               >
                 {item.label}
               </Link>
@@ -100,6 +108,7 @@ export default function Header() {
           <Link
             href="/contact"
             className="block text-black hover:text-[#ffb200]"
+            onClick={handleMobileNavigate}
           >
             Contact
           </Link>
